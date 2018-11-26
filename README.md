@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# APICRM-Angular-FrontEnd
+
+>>>>>>> d5b52c6c1b52a71774edc68bf67f819a4d1534d7
 # ApiCrmFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
