@@ -1,12 +1,14 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm" *ngFor="let item of fornecedor">
-            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">{{item.title}}</div>
-                <div class="card-body">
-                  <h1 class="card-title">{{item.count}}</h1>
+        <ng-container *ngFor="let item of fornecedor">
+            <div class="col-3">
+                <div class="card text-white mb-3">
+                    <div class="card-header" style="background-color:#084B8A">{{item.title}}</div>
+                    <div class="card-body" style="background-color:#BDBDBD">
+                        <h1 class="card-title">{{item.count}}</h1>
+                    </div>
                 </div>
-              </div>
-        </div>
-    </div>       
-<div>
+            </div>
+        </ng-container>
+    </div>
+</div>

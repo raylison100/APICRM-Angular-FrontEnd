@@ -12,7 +12,8 @@ export class CrmService {
   }
 
   listarTodos(){
-    return this.http.get<Fornecedores>(this.url);
-  	//return fornecedores ? JSON.parse(fornecedores) : [];
+    while(true){
+      return this.http.get<Fornecedores>(this.url);
+    }
   }
 }

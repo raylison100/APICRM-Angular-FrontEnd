@@ -9,17 +9,21 @@ import { Fornecedores } from '../shared/fornecedores.model'
   styleUrls: ['./crm.component.css']
 })
 export class CrmComponent implements OnInit {
- 
+
   fornecedor: Fornecedores[];
   constructor(
     private crmService: CrmService,
   ) { }
 
   ngOnInit() {
-    this.crmService.listarTodos()
-      .subscribe((response: any) =>  {
-        console.log(response.data)
-        this.fornecedor = response.data;   
+    this.listartatus();
+  }
+
+  listartatus() {
+    setInterval(() => {
+      this.crmService.listarTodos().toPromise().then((response: any) => {
+        this.fornecedor = response.data;
       });
+    }, 5000);
   }
 }
